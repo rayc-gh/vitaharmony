@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+---
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Health Questionnaire | Vita Harmony TCM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#F9F8F4] text-[#1A1C19] font-sans pt-32 pb-20 px-6">
+    <div class="max-w-2xl mx-auto bg-white p-12 rounded-[3rem] shadow-xl border border-[#4A5D4E]/10">
+        <h1 class="text-3xl font-serif text-[#4A5D4E] mb-2">First-Time Health Profile</h1>
+        <p class="text-xs uppercase tracking-widest text-[#C5A059] font-bold mb-10">Confidential Medical Intake</p>
+        
+        <form class="space-y-8">
+            <div class="space-y-4">
+                <label class="block text-xs font-bold uppercase text-gray-400">Medical History & Allergies</label>
+                <textarea rows="4" class="w-full p-4 bg-gray-50 rounded-2xl border-none outline-none focus:ring-1 focus:ring-[#C5A059]" placeholder="Please list any chronic conditions or allergies..."></textarea>
+            </div>
+
+            <div class="space-y-4">
+                <label class="block text-xs font-bold uppercase text-gray-400">Current Medications</label>
+                <textarea rows="2" class="w-full p-4 bg-gray-50 rounded-2xl border-none outline-none focus:ring-1 focus:ring-[#C5A059]" placeholder="List any medications or supplements..."></textarea>
+            </div>
+
+            {/* Legal Liability Box */}
+            <div class="p-6 bg-red-50 rounded-2xl border border-red-100">
+                <p class="text-[11px] text-red-800 leading-relaxed mb-4 italic">
+                    "The customer acknowledges that all information provided to the clinic, including medical history, symptoms, and current medications, is accurate to the best of their knowledge. The clinic is not liable for any adverse outcomes, improper diagnosis, or ineffective treatment resulting from incomplete, inaccurate, or falsified information provided by the customer."
+                </p>
+                <label class="flex items-start gap-3 cursor-pointer">
+                    <input type="checkbox" required class="mt-1 accent-red-600" />
+                    <span class="text-xs font-bold text-red-900 uppercase">I agree to this medical liability statement</span>
+                </label>
+            </div>
+
+            <button type="submit" class="w-full bg-[#4A5D4E] text-white py-5 rounded-2xl font-bold uppercase tracking-widest text-sm shadow-lg hover:bg-[#3d4d41] transition-all">
+                Submit Secure Record
+            </button>
+        </form>
+    </div>
+</body>
+</html>
